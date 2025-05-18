@@ -92,7 +92,21 @@ class VideoItem extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () => Navigator.pop(context, true),
+                    onPressed: () async {
+                      await _deleteVideo(videoModel.videoId);
+                      Navigator.pop(context);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: const Text('Xóa video thành công'),
+                          backgroundColor: const Color.fromARGB(
+                            255,
+                            236,
+                            83,
+                            83,
+                          ),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Chắc chắn',
                       style: TextStyle(color: Colors.red),
@@ -145,9 +159,20 @@ class VideoItem extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {
-                          _deleteVideo(videoModel.videoId);
+                        onPressed: () async {
+                          await _deleteVideo(videoModel.videoId);
                           Navigator.pop(context);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: const Text('Xóa video thành công'),
+                              backgroundColor: const Color.fromARGB(
+                                255,
+                                236,
+                                83,
+                                83,
+                              ),
+                            ),
+                          );
                         },
                         child: const Text(
                           'Chắc chắn',

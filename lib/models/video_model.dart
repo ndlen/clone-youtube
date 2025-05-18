@@ -14,12 +14,7 @@ class VideoModel {
 }
 
 Future<List<VideoModel>> getVideos() async {
-  final staticVideoIds = [
-    'abPmZCZZrFA',
-    '4tYuIU7pLmI',
-    'Llw9Q6akRo4',
-    'I7QmVVbsGbw',
-  ];
+  final staticVideoIds = ['FN7ALfpGxiI', '_AL4IwHuHlY'];
   final prefs = await SharedPreferences.getInstance();
   final dynamicVideoIds = prefs.getStringList('video_ids') ?? [];
   final allVideoIds = [...staticVideoIds, ...dynamicVideoIds].toSet().toList();
