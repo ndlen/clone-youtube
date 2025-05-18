@@ -1,7 +1,7 @@
 import 'package:clone_youtube/components/video_item.dart';
 import 'package:clone_youtube/models/video_model.dart';
 import 'package:clone_youtube/pages/add_video_page.dart';
-import 'package:clone_youtube/youtube_service.dart';
+import 'package:clone_youtube/service/youtube_service.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:clone_youtube/youtube_service.dart';
+import 'package:clone_youtube/service/youtube_service.dart';
 
 class AddVideoPage extends StatefulWidget {
   const AddVideoPage({super.key});
