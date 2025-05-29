@@ -75,10 +75,7 @@ class _AddVideoPageState extends State<AddVideoPage>
           SnackBar(
             content: const Text('Thêm video thành công'),
             backgroundColor: Colors.green.shade400,
-            animation: CurvedAnimation(
-              parent: _animationController,
-              curve: Curves.easeInOut,
-            ),
+            
           ),
         );
       } else {

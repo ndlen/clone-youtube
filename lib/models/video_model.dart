@@ -10,7 +10,7 @@ class VideoModel {
 
   String get videoUrl => 'https://youtube.com/watch?v=$videoId';
   String get thumbnailUrl =>
-      'https://img.youtube.com/vi/$videoId/mqdefault.jpg'; // Sử dụng mqdefault để tải nhanh hơn
+      'https://img.youtube.com/vi/$videoId/mqdefault.jpg';
 }
 
 Future<List<VideoModel>> getVideos() async {

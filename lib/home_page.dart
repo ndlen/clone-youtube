@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage>
 
       for (var video in loadedVideoIds) {
         if (video.title == null) {
-          // Chỉ gọi API nếu chưa có thông tin
           try {
             final ytVideo = await yt.videos.get(
               'https://youtube.com/watch?v=${video.videoId}',

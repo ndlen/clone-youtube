@@ -1,4 +1,5 @@
 import 'package:clone_youtube/home_page.dart';
+import 'package:clone_youtube/pages/splase_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
 
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplasePage(),
     );
   }
 }

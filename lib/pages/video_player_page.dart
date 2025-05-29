@@ -57,7 +57,6 @@ class _VideoPlayerPageState extends State<VideoPlayerPage>
       setState(() {
         _videoInfo = {'title': video.title, 'author': video.author};
       });
-      await _fetchLyric(video.title);
     } catch (e) {
       setState(() {
         _videoInfo = {
@@ -72,8 +71,6 @@ class _VideoPlayerPageState extends State<VideoPlayerPage>
   List<String>? _lyricLines;
 
   Future<void> _fetchLyric(String title) async {
-    if (_lyricLines != null) return; // Skip if already loaded
-
     try {
       final lyricResponse = await _lyricService.fetchLyric(title);
       if (lyricResponse['status'] == 'success') {
